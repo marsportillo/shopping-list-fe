@@ -1,0 +1,22 @@
+<p>product-form works!</p>
+    <form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitProductForm()">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please add all information">
+          <nz-input-group nzPrefixIcon="barcode">
+            <input formControlName="productName" nz-input placeholder="Product Name" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please add the product price!">
+          <nz-input-group nzPrefixIcon="wallet">
+            <input formControlName="productPrice" nz-input type="number" placeholder="Price" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary" [disabled]="!validateForm.valid">Add product</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
