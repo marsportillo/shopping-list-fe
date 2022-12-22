@@ -6,11 +6,17 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CatalogueComponent } from './catalogue/catalogue.component';
+import { ProductTileComponent } from './product-tile/product-tile.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
+
 
 @NgModule({
   declarations: [
     ProductListComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    CatalogueComponent,
+    ProductTileComponent
   ],
   imports: [
     ProductRoutingModule,
@@ -18,7 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     NzFormModule,
-    NzInputModule
+    NzInputModule,
+    NzCardModule
   ]
 })
 

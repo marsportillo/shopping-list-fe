@@ -11,7 +11,9 @@ export class ProductFormComponent implements OnInit {
   validateForm!: UntypedFormGroup;
 
   submitProductForm(): void {
-    this.productService.addProductService(this.validateForm.value).subscribe();
+    this.productService.addProductService(this.validateForm.value).subscribe((res)=> {
+      console.log(res);
+    });
     console.log('submit', this.validateForm.value);
   }
 
